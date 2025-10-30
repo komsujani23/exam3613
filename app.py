@@ -1,4 +1,4 @@
-from flask import Flask, render_template, requests
+from flask import Flask, render_template, request
 
 app= Flask(__name__)
 
@@ -8,7 +8,7 @@ def index():
 
 @app.route('/submit')
 def submit():
-    uname= requests.form['f1']['uname'].text
+    uname= request.form['f1']['uname'].text
     return render_template('greetings.html',name=uname)
 
 if __name__=="__main__":
