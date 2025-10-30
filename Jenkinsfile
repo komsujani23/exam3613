@@ -1,4 +1,4 @@
-pipeline{
+Pipeline{
     stages{
         stage("Running testcases using selenium"){
             steps{
