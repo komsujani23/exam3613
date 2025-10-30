@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubedemo-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubedemo
+  template:
+    metadata:
+      labels:
+        app: kubedemo
+    spec:
+      - name: kubedemo
+        image: komsujani23/sample:v1
+        ports:
+          - containerPort: 30011
