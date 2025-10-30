@@ -1,15 +1,12 @@
 from flask import Flask, render_template, request
-
-app= Flask(__name__)
-
+app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('form.html')
-
-@app.route('/submit')
+@app.route('/submit', methods=['GET','POST'])
 def submit():
-    uname= request.form['f1']['uname'].text
-    return render_template('greetings.html',name=uname)
+    username = request.form['username']
+    return render_template('greetings.html', name=username)
 
-if __name__=="__main__":
-    app.run(host='127.0.0.1',port=5000,debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port= 5000, debug = True)
