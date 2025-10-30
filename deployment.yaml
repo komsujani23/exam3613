@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: kubedemo
-          image: komsujani23/sample:v1
+          image: komsujani23/sample:exam
           ports:
             - containerPort: 5000
