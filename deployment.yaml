@@ -12,7 +12,8 @@ spec:
       labels:
         app: kubedemo
     spec:
-      - name: kubedemo
-        image: komsujani23/sample:v1
-        ports:
-          - containerPort: 5000
+      containers:
+        - name: kubedemo
+          image: komsujani23/sample:v1
+          ports:
+            - containerPort: 5000
