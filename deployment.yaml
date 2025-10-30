@@ -15,4 +15,4 @@ spec:
       - name: kubedemo
         image: komsujani23/sample:v1
         ports:
-          - containerPort: 30011
+          - containerPort: 5000
