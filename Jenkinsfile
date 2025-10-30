@@ -1,4 +1,5 @@
-Pipeline{
+pipeline{
+    agent any
     stages{
         stage("Running testcases using selenium"){
             steps{
