@@ -5,10 +5,9 @@ metadata:
 spec:
   selector:
     app: kubedemo
-  metadata:
-    ports:
-      - protocol: TCP
-        port: 5000
-        targetPort: 5000
-        nodePort: 30011
-    type: NodePort
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+      nodePort: 30011
+  type: NodePort
